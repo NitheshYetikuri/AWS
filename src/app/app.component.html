@@ -1,0 +1,18 @@
+<div class="upload-container">
+  <h1>Upload Document</h1>
+  <form (ngSubmit)="onSubmit()" class="upload-form">
+    <div class="form-group">
+      <label for="companyName">Company Name:</label>
+      <input type="text" id="companyName" [(ngModel)]="formData.companyName" name="companyName" required>
+    </div>
+    <div class="form-group">
+      <label for="prompt">Prompt:</label>
+      <input type="text" id="prompt" [(ngModel)]="formData.prompt" name="prompt" required>
+    </div>
+    <div class="form-group">
+      <label for="document">Document:</label>
+      <input type="file" id="document" (change)="onFileChange($event)" name="document" required>
+    </div>
+    <button type="submit" class="submit-button">Submit</button>
+  </form>
+</div>
